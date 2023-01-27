@@ -46,7 +46,13 @@ export default function Main() {
           </div>
         )}
       </div>
-      {cardstate && <Card props={userdata}></Card>}
+      {cardstate && (
+        <Card
+          props={userdata}
+          setCardState={setCardState}
+          setUserData={setUserData}
+        ></Card>
+      )}
     </div>
   );
 }
