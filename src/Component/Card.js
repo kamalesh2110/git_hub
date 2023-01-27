@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import Main from "./Main";
+import React from "react";
 
 export default function Card({ props, setCardState, setUserData }) {
-  const [backmenu, setmenu] = useState(false);
-
   return (
     <div
       style={{
