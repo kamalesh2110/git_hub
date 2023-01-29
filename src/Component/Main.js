@@ -18,17 +18,14 @@ export default function Main() {
         console.log(response.status);
         setUserData(response.data);
         setFlag(response.status);
+        setCardState(true);
       })
       .catch((error) => {
         console.log(error);
+        alert(user + " User not found ");
+        setCardState(false);
+        setUser("");
       });
-
-    setCardState(true);
-    // if (flag === 404) {
-    //   alert("User not found");
-    //   setCardState(false);
-    //   setUser("");
-    // } else if (flag === 200) {
   };
 
   return (
