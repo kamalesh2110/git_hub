@@ -6,6 +6,7 @@ import Card from "./Card";
 export default function Main() {
   const [userdata, setUserData] = useState({});
   const [user, setUser] = useState("");
+  const [flag, setFlag] = useState();
   const [cardstate, setCardState] = useState(false);
 
   const fetchInfo = () => {
@@ -14,13 +15,20 @@ export default function Main() {
     axios
       .get(url)
       .then((response) => {
-        console.log(response.data.avatar_url);
+        console.log(response.status);
         setUserData(response.data);
+        setFlag(response.status);
       })
       .catch((error) => {
         console.log(error);
       });
+
     setCardState(true);
+    // if (flag === 404) {
+    //   alert("User not found");
+    //   setCardState(false);
+    //   setUser("");
+    // } else if (flag === 200) {
   };
 
   return (
@@ -32,6 +40,7 @@ export default function Main() {
             <input
               type="text"
               placeholder="Username"
+              value={user}
               onChange={(e) => {
                 setUser(e.target.value);
               }}
@@ -46,6 +55,7 @@ export default function Main() {
           </div>
         )}
       </div>
+
       {cardstate && (
         <Card
           props={userdata}
