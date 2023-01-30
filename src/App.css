@@ -5,7 +5,7 @@
 
 @media (min-width: 200px) and (max-width:424px) {
     .App {
-        background-image: linear-gradient(to right, rgb(173, 86, 86), rgb(207, 207, 61));
+        background-image: linear-gradient(to right, rgb(76, 161, 95), rgb(127, 115, 197));
     }
 }
 
