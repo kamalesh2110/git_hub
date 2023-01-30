@@ -52,3 +52,25 @@
         transform: rotate(360deg);
     }
 }
+
+.Card {
+    border: 1px solid black;
+    background: pink
+}
+
+.Card:hover {
+    box-shadow: 5px 5px 2px lightblue;
+}
+
+.button_info {
+    width: 6rem;
+    transition: width 1s;
+    height: fit-content;
+}
+
+.button_info:hover {
+    width: 7rem;
+    height: fit-content;
+    box-shadow: 3px 3px 3px rgb(211, 124, 124);
+    border-radius: 8px;
+}

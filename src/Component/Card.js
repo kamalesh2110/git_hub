@@ -1,5 +1,6 @@
 import React from "react";
 import Spinner from "react-bootstrap/Spinner";
+import "../App.css";
 
 export default function Card({ props, setCardState, setUserData }) {
   return (
@@ -13,7 +14,7 @@ export default function Card({ props, setCardState, setUserData }) {
           alignItems: "center",
         }}
       >
-        <div style={{ border: "1px solid black", background: "pink" }}>
+        <div className="Card" style={{}}>
           {props.avatar_url && props.avatar_url.length > 0 ? (
             <img
               src={props.avatar_url}

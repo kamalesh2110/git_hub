@@ -44,6 +44,7 @@ export default function Main() {
               }}
             ></input>
             <button
+              className="button_info"
               onClick={(e) => {
                 fetchInfo(e);
               }}
