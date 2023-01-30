@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import Card from "./Card";
+import "../App.css";
 
 export default function Main() {
   const [userdata, setUserData] = useState({});
@@ -30,7 +31,7 @@ export default function Main() {
 
   return (
     <div>
-      <div>
+      <div className="HeaderClass">
         <h1>Welcome to Git User Details</h1>
         {!cardstate && (
           <div>

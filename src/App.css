@@ -1,16 +1,19 @@
 .App {
     text-align: center;
+}
+
+.HeaderClass {
     background-image: linear-gradient(to right, red, yellow);
 }
 
 @media (min-width: 200px) and (max-width:424px) {
-    .App {
+    .HeaderClass {
         background-image: linear-gradient(to right, rgb(76, 161, 95), rgb(127, 115, 197));
     }
 }
 
 @media (min-width: 425px) and (max-width:768px) {
-    .App {
+    .HeaderClass {
         background-image: linear-gradient(to right, rgb(223, 53, 180), rgb(68, 170, 170));
     }
 }
